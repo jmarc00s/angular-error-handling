@@ -1,7 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
 import { NavbarComponent } from '@/components';
-import { MessageMediator } from './application/mediators/message.mediator';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
