@@ -1,12 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { NavbarComponent } from '@/components';
+import { MessageMediator } from './application/mediators/message.mediator';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'angular-error-handling';
+  throwError(): void {
+    throw new Error('This is an Error');
+  }
 }
